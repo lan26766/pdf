@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Fusion Support | Help Center, FAQ & Contact</title>
+    <meta name="description" content="Get help with PDF Fusion. Browse FAQs, documentation, tutorials, and contact our support team. We're here to help you with your PDF software.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 支持页面特有样式 */
+        .support-hero {
+            padding-top: 140px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
+            padding-bottom: 60px;
+        }
+        
+        .support-hero h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .support-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--gray-color);
+        }
+        
+        .help-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .help-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+        }
+        
+        .help-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .help-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+            margin: 80px 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-category {
+            margin-bottom: 50px;
+        }
+        
+        .faq-category h3 {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 50px;
+            margin-top: 60px;
+        }
+        
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .support-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .resource-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .resource-links {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .resource-links li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .resource-links li:last-child {
+            border-bottom: none;
+        }
+        
+        .resource-links a {
+            color: var(--dark-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .resource-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .resource-links i {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?w=100&auto=format&fit=crop" alt="PDF Fusion Logo">
+                <span>PDF Fusion</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="support.html" class="active">Support</a></li>
+                <li class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                </li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Support Hero -->
+    <section class="support-hero">
+        <div class="container">
+            <h1>How Can We Help You?</h1>
+            <p class="support-subtitle">Find answers in our documentation, browse FAQs, or contact our support team directly.</p>
+            
+            <div class="help-categories">
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQs</h3>
+                    <p>Find quick answers to common questions about installation, features, and licensing.</p>
+                    <a href="#faq" class="btn btn-secondary" style="margin-top: 20px;">
+                        Browse FAQs
+                    </a>
+                </div>
+                
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Step-by-step guides and tutorials for all PDF Fusion features and capabilities.</p>
+                    <a href="#resources" class="btn btn-secondary" style="margin-top: 20px;">
+                        View Documentation
+                    </a>
+                </div>
+                
+                <div class="help-card">
+                    <div class="help-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Contact Support</h3>
+                    <p>Can't find what you're looking for? Our support team is ready to help you.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Quick answers to common questions about PDF Fusion</p>
+            
+            <div class="faq-container">
+                <div class="faq-category">
+                    <h3>Installation & Setup</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I install PDF Fusion?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>1. Download the installer from our <a href="download.html">Download page</a><br>
+                               2. Run the installer file (PDF-Fusion-Setup.exe for Windows, PDF-Fusion.dmg for Mac)<br>
+                               3. Follow the on-screen instructions<br>
+                               4. Launch PDF Fusion and start your 7-day free trial</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What are the system requirements?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Windows:</strong> Windows 10 or 11 (64-bit), 4GB RAM minimum (8GB recommended), 500MB free disk space, .NET Framework 4.8 or later.<br>
+                               <strong>macOS:</strong> macOS 10.15 (Catalina) or later, 4GB RAM minimum, 500MB free disk space.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I change the language?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Go to <strong>Settings > Language</strong> and select from 20+ available languages. The change takes effect immediately.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h3>Licensing & Payment</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How does the 7-day free trial work?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The trial gives you <strong>full access to all features for 7 days</strong>. No credit card is required. After 7 days, you can purchase a lifetime license to continue using the software. Your trial starts from the moment you first launch the application.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What payment methods do you accept?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay. All payments are processed securely through our partners (Gumroad/Paddle).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I get a refund?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied with PDF Fusion for any reason, contact our support team within 30 days of purchase for a full refund, no questions asked.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h3>Features & Usage</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Does PDF Fusion work offline?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Yes, 100% offline!</strong> PDF Fusion is a desktop application that processes all files locally on your computer. Your documents never leave your machine, ensuring maximum privacy and security.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How many files can I process at once?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>PDF Fusion has no hard limits on batch processing. You can process hundreds or even thousands of files simultaneously, limited only by your computer's memory and processing power.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I convert scanned PDFs to Word?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, PDF Fusion includes OCR (Optical Character Recognition) technology that can convert scanned PDFs into editable Word documents. The accuracy depends on the scan quality, but it's highly effective for most documents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Support Resources -->
+    <section class="support-resources" id="resources">
+        <div class="container">
+            <h2 class="section-title">Support Resources</h2>
+            <p class="section-subtitle">Additional resources to help you get the most out of PDF Fusion</p>
+            
+            <div class="support-resources">
+                <div class="resource-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Tutorials & Guides</h3>
+                    <p>Learn how to use PDF Fusion effectively with our step-by-step tutorials.</p>
+                    <ul class="resource-links">
+                        <li><a href="#"><i class="fas fa-play-circle"></i> Getting Started Video Guide</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Batch Processing Tutorial</a></li>
+                        <li><a href="#"><i class="fas fa-lock"></i> PDF Security Best Practices</a></li>
+                        <li><a href="#"><i class="fas fa-cogs"></i> Advanced Features Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-download"></i> Downloads</h3>
+                    <p>Get the latest version of PDF Fusion and related resources.</p>
+                    <ul class="resource-links">
+                        <li><a href="download.html"><i class="fas fa-download"></i> Download Latest Version</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Previous Versions Archive</a></li>
+                        <li><a href="#"><i class="fas fa-font"></i> Additional Language Packs</a></li>
+                        <li><a href="#"><i class="fas fa-palette"></i> Custom Watermark Templates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-users"></i> Community</h3>
+                    <p>Connect with other PDF Fusion users and share tips.</p>
+                    <ul class="resource-links">
+                        <li><a href="#"><i class="fab fa-reddit"></i> PDF Fusion Subreddit</a></li>
+                        <li><a href="#"><i class="fab fa-discord"></i> Discord Community</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube Tutorials</a></li>
+                        <li><a href="#"><i class="fab fa-github"></i> GitHub Issues & Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Our Support Team</h2>
+            <p class="section-subtitle">Can't find what you're looking for? We're here to help.</p>
+            
+            <div class="contact-form">
+                <form id="supportForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" class="form-control" required>
+                            <option value="">Select a topic</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing & Licensing</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="business">Business/Enterprise Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" class="form-control" required placeholder="Please provide details about your issue or question. Include steps to reproduce if reporting a bug."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attachment">Attachments (optional)</label>
+                        <input type="file" id="attachment" class="form-control">
+                        <small>You can attach screenshots or problematic PDF files (max 10MB total)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <p class="response-note" style="margin-top: 15px; color: var(--gray-color);">
+                            <i class="fas fa-clock"></i> We typically respond within 24 hours on business days.
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <h3>Other Ways to Reach Us</h3>
+                <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <strong>Email</strong>
+                        <p>support@pdffusion.com</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <strong>Live Chat</strong>
+                        <p>Available 9AM-5PM EST</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <strong>Twitter</strong>
+                        <p>@PDFFusionSupport</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PDF Fusion</h4>
+                    <p>The professional PDF solution that respects your privacy and budget.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="support.html#faq">FAQ</a></li>
+                        <li><a href="support.html#contact">Contact Us</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PDF Fusion. All rights reserved. Made with <i class="fas fa-heart"></i> for PDF professionals worldwide.</p>
+                <p class="footer-languages">
+                    <i class="fas fa-globe"></i> Available in: English, Español, Français, Deutsch, Italiano, 日本語, 中文, and 15+ more
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 支持页面特定脚本
+        document.addEventListener('DOMContentLoaded', function() {
+            // 联系表单提交处理
+            const supportForm = document.getElementById('supportForm');
+            if (supportForm) {
+                supportForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // 显示成功消息
+                    const submitBtn = supportForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // 模拟发送过程
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                        submitBtn.style.backgroundColor = '#28a745';
+                        
+                        // 显示成功消息
+                        const successMessage = document.createElement('div');
+                        successMessage.innerHTML = `
+                            <div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 10px; margin-top: 20px; border: 1px solid #c3e6cb;">
+                                <strong><i class="fas fa-check-circle"></i> Message Sent Successfully!</strong>
+                                <p>Thank you for contacting us. We'll get back to you within 24 hours on business days.</p>
+                            </div>
+                        `;
+                        
+                        supportForm.parentNode.insertBefore(successMessage, supportForm.nextSibling);
+                        
+                        // 重置表单
+                        setTimeout(() => {
+                            supportForm.reset();
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.style.backgroundColor = '';
+                        }, 3000);
+                    }, 1500);
+                });
+            }
+            
+            // 为支持页面FAQ添加特殊处理
+            const supportFaqItems = document.querySelectorAll('#faq .faq-item');
+            supportFaqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                // 默认展开第一个FAQ
+                if (item === supportFaqItems[0]) {
+                    answer.style.display = 'block';
+                    question.querySelector('i').style.transform = 'rotate(180deg)';
+                }
+                
+                question.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    
+                    // 如果点击的是已展开的，则关闭
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        // 关闭所有其他FAQ
+                        supportFaqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer').style.display = 'none';
+                                otherItem.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
+                            }
+                        });
+                        
+                        // 打开当前FAQ
+                        answer.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
