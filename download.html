@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	  <!-- Umami 实时统计 -->
+    
+<script defer src="https://cloud.umami.is/script.js" data-website-id="af4a97d5-e094-4596-93d7-6a150aaf3759"></script>
+    
+    <!-- Google Analytics 深度分析 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFFX5DDCTG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JFFX5DDCTG');
+        
+        // 跟踪下载事件
+        function trackDownload(fileName) {
+            umami.track('download', { file: fileName });
+            gtag('event', 'download', {
+                'event_category': 'engagement',
+                'event_label': fileName
+            });
+        }
+    </script>
+
     <style>
         /* 下载页面特有样式 */
         .download-header {

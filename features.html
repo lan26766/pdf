@@ -217,6 +217,29 @@
             }
         }
     </style>
+	
+	  <!-- Umami 实时统计 -->
+    
+<script defer src="https://cloud.umami.is/script.js" data-website-id="af4a97d5-e094-4596-93d7-6a150aaf3759"></script>
+    
+    <!-- Google Analytics 深度分析 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFFX5DDCTG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3SEL3Y07W8');
+        
+        // 跟踪下载事件
+        function trackDownload(fileName) {
+            umami.track('download', { file: fileName });
+            gtag('event', 'download', {
+                'event_category': 'engagement',
+                'event_label': fileName
+            });
+        }
+    </script>
+
 </head>
 <body>
     <!-- 完整导航部分 -->
