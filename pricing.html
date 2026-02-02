@@ -3,472 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Fusion Pricing | One-Time Payment, Lifetime License</title>
-    <meta name="description" content="Simple, transparent pricing for PDF Fusion. One payment for lifetime access. No subscriptions. 30-day money-back guarantee. 7-day free trial available.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	
-	<!-- Umami 实时统计 -->
-    
-<script defer src="https://cloud.umami.is/script.js" data-website-id="af4a97d5-e094-4596-93d7-6a150aaf3759"></script>
-    
-    <!-- Google Analytics 深度分析 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NHCSFBBTJJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-NHCSFBBTJJ');
-        
-        // 跟踪下载事件
-        function trackDownload(fileName) {
-            umami.track('download', { file: fileName });
-            gtag('event', 'download', {
-                'event_category': 'engagement',
-                'event_label': fileName
-            });
-        }
-    </script>
-
-    <style>
-        /* 定价页面特有样式 */
-        .pricing-hero {
-            padding-top: 140px;
-            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
-            text-align: center;
-            padding-bottom: 60px;
-        }
-        
-        .pricing-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 60px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .pricing-card-premium {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            padding: 50px;
-            width: 100%;
-            border: 3px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pricing-badge {
-            position: absolute;
-            top: 20px;
-            right: -40px;
-            background: var(--accent-color);
-            color: white;
-            padding: 8px 40px;
-            transform: rotate(45deg);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        
-        .pricing-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .price-display {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            gap: 15px;
-            margin: 25px 0;
-        }
-        
-        .original-price {
-            font-size: 1.8rem;
-            color: var(--gray-color);
-            text-decoration: line-through;
-        }
-        
-        .current-price {
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-        
-        .price-period {
-            font-size: 1.2rem;
-            color: var(--gray-color);
-            font-weight: 500;
-        }
-        
-        .pricing-features-list {
-            list-style: none;
-            margin: 40px 0;
-        }
-        
-        .pricing-features-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .pricing-features-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .feature-check {
-            width: 24px;
-            height: 24px;
-            background-color: #e7f7ef;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .feature-check i {
-            color: #28a745;
-            font-size: 0.9rem;
-        }
-        
-        .pricing-cta {
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .btn-pricing {
-            width: 100%;
-            padding: 20px;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            font-size: 2rem;
-            margin-top: 20px;
-            color: var(--gray-color);
-        }
-        
-        .guarantee-box {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 30px;
-            border: 2px dashed #dee2e6;
-        }
-        
-        .guarantee-icon {
-            font-size: 3rem;
-            color: #28a745;
-            margin-bottom: 15px;
-        }
-        
-        .license-comparison {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            margin-top: 40px;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .comparison-table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
-        
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .feature-present {
-            color: #28a745;
-            font-weight: 600;
-        }
-        
-        .feature-absent {
-            color: #dc3545;
-        }
-        
-        .faq-pricing {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
+    <title>PDF Fusion Pro Pricing: One-Time Purchase, Lifetime License</title>
+    <meta name="description" content="PDF Fusion Pro pricing: $69 one-time purchase for lifetime license. No subscriptions, no recurring fees. 7-day full-feature free trial. Buy now and save forever.">
+    <meta name="keywords" content="PDF Fusion Pro pricing, PDF software pricing, one-time purchase PDF software, lifetime license PDF editor, PDF Fusion Pro cost, buy PDF Fusion Pro">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+
+    <!-- Header Navigation -->
+    <header class="header glass">
         <div class="container">
-            <div class="logo">
-                <img src="https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?w=100&auto=format&fit=crop" alt="PDF Fusion Logo">
-                <span>PDF Fusion Pro</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="download.html">Download</a></li>
-                <li><a href="pricing.html" class="active">Pricing</a></li>
-                <li><a href="support.html">Support</a></li>
-                <li class="language-selector">
-                    <i class="fas fa-globe"></i>
-                    <span>EN</span>
-                </li>
-            </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
+            <nav class="nav">
+                <a href="index.html" class="nav-logo gradient-text">PDF Fusion Pro</a>
+                <ul class="nav-links">
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html" class="active">Pricing</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-outline" target="_blank">Free Trial</a>
+                    <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-primary btn-glow" target="_blank">Buy Now - $69</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" style="max-width: 100%; text-align: center;">
+                    <h1 class="gradient-text">Simple, Transparent Pricing</h1>
+                    <p class="hero-subtitle">No subscriptions. No hidden fees. Just a one-time payment for lifetime access to all features and updates.</p>
+                    <div style="margin-top: var(--spacing-lg); font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #00d4ff, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: glow 2s ease-in-out infinite alternate;">
+                        $69 <span style="font-size: 1rem; font-weight: 500; color: var(--text-secondary);">One-time purchase • Lifetime license</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Pricing Hero -->
-    <section class="pricing-hero">
+    <!-- Pricing Section -->
+    <section class="pricing">
         <div class="container">
-            <h1>Simple, Honest Pricing</h1>
-            <p class="section-subtitle">One payment, lifetime access. No subscriptions, no hidden fees.</p>
+            <div class="section-title">
+                <h2 class="gradient-text">The Perfect Plan for Everyone</h2>
+                <p>One simple plan that includes everything you need to work with PDFs professionally</p>
+            </div>
             
-            <div class="pricing-container">
-                <div class="pricing-card-premium">
-                    <div class="pricing-badge">MOST POPULAR</div>
-                    
+            <div class="pricing-grid">
+                <div class="pricing-card featured glass card-3d animate-float">
                     <div class="pricing-header">
-                        <h2>PDF Fusion Pro</h2>
-                        <p>Complete PDF solution for professionals and businesses</p>
-                        
-                        <div class="price-display">
-                            <span class="original-price">$99.99</span>
-                            <span class="current-price">$69.99</span>
+                        <h3 class="gradient-text">PDF Fusion Pro</h3>
+                        <div class="pricing-price gradient-text">
+                            $69 <span>One-time payment</span>
                         </div>
-                        
-                        <p class="price-period">One-time payment • Lifetime license • Free updates</p>
                     </div>
-                    
-                    <ul class="pricing-features-list">
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>All PDF conversion features</strong>
-                                <p>Convert to/from Word, Excel, PowerPoint, HTML, Images, TXT</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>Complete PDF editing & processing</strong>
-                                <p>Merge, split, encrypt, decrypt, watermark, organize pages</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>Batch processing capabilities</strong>
-                                <p>Process hundreds of files simultaneously (convert, watermark, encrypt)</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>100% offline operation</strong>
-                                <p>Your documents never leave your computer. Maximum privacy.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>20+ language interfaces</strong>
-                                <p>Switch between English, Spanish, French, German, Japanese, Chinese, and more</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>Lifetime updates for version 2.x</strong>
-                                <p>All future updates for the purchased major version are free</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>Priority email support</strong>
-                                <p>Get help from our technical support team within 24 hours</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-check"><i class="fas fa-check"></i></div>
-                            <div>
-                                <strong>30-day money-back guarantee</strong>
-                                <p>Not satisfied? Get a full refund within 30 days, no questions asked</p>
-                            </div>
-                        </li>
+                    <ul class="pricing-features">
+                        <li>✅ All features included</li>
+                        <li>✅ Lifetime free updates</li>
+                        <li>✅ 7-day full-feature free trial</li>
+                        <li>✅ Priority customer support</li>
+                        <li>✅ For personal and business use</li>
+                        <li>✅ 30-day money-back guarantee</li>
+                        <li>✅ 100% offline processing</li>
+                        <li>✅ Batch processing capabilities</li>
+                        <li>✅ Advanced OCR technology</li>
+                        <li>✅ Comprehensive security features</li>
+                        <li>✅ 20+ supported languages</li>
+                        <li>✅ Windows 10/11 compatibility</li>
                     </ul>
-                    
-                    <div class="pricing-cta">
-                        <a href="download.html" class="btn btn-primary btn-pricing">
-                            <i class="fas fa-shopping-cart"></i> Buy Now - $69.99
-                        </a>
-                        
-                        <p class="trial-note">
-                            <i class="fas fa-download"></i> 
-                            <a href="download.html" style="color: var(--primary-color); font-weight: 600;">Try free for 7 days</a> 
-                            before purchasing
-                        </p>
-                        
-                        <div class="payment-methods">
-                            <i class="fab fa-cc-visa"></i>
-                            <i class="fab fa-cc-mastercard"></i>
-                            <i class="fab fa-cc-amex"></i>
-                            <i class="fab fa-cc-paypal"></i>
-                            <i class="fab fa-apple-pay"></i>
-                        </div>
+                    <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-primary btn-glow btn-large" target="_blank">Buy Now - $69</a>
+                    <p style="margin-top: var(--spacing-lg); text-align: center; font-size: 0.875rem; color: var(--text-secondary);">
+                        Secure payment via Gumroad • No credit card required for trial
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Comparison with Subscription -->
+            <div style="margin-top: var(--spacing-3xl);">
+                <div class="card glass">
+                    <h3 class="gradient-text" style="text-align: center; margin-bottom: var(--spacing-xl);">Why Choose One-Time Purchase?</h3>
+                    <div class="comparison-table">
+                        <tr>
+                            <th style="width: 33%;">Feature</th>
+                            <th style="width: 33%;">PDF Fusion Pro<br>(One-time purchase)</th>
+                            <th style="width: 33%;">Subscription PDF Tools</th>
+                        </tr>
+                        <tr>
+                            <td>Cost over 5 years</td>
+                            <td>$69</td>
+                            <td>$300-$600+</td>
+                        </tr>
+                        <tr>
+                            <td>Software ownership</td>
+                            <td>✅ You own it forever</td>
+                            <td>❌ Lose access if you stop paying</td>
+                        </tr>
+                        <tr>
+                            <td>Updates</td>
+                            <td>✅ Lifetime free updates</td>
+                            <td>✅ Only while subscribed</td>
+                        </tr>
+                        <tr>
+                            <td>Features</td>
+                            <td>✅ All features included</td>
+                            <td>❌ Often limited features in basic plans</td>
+                        </tr>
+                        <tr>
+                            <td>Offline use</td>
+                            <td>✅ 100% offline</td>
+                            <td>❌ Often requires internet</td>
+                        </tr>
+                        <tr>
+                            <td>File size limits</td>
+                            <td>✅ No limits</td>
+                            <td>❌ Often limited</td>
+                        </tr>
                     </div>
-                    
-                    <div class="guarantee-box">
-                        <div class="guarantee-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>30-Day Money-Back Guarantee</h3>
-                        <p>We're confident you'll love PDF Fusion Pro. If you're not completely satisfied within 30 days of purchase, we'll issue a full refund. No questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Trial Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="gradient-text">Try Before You Buy</h2>
+                <p>Experience all features risk-free with our 7-day full-feature free trial</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card glass card-3d hover-lift">
+                    <div class="feature-icon gradient-text">🆓</div>
+                    <h3>No Credit Card Required</h3>
+                    <p>Start your free trial without entering any payment information. No strings attached.</p>
+                </div>
+                <div class="feature-card glass card-3d hover-lift">
+                    <div class="feature-icon gradient-text">✨</div>
+                    <h3>Full-Feature Access</h3>
+                    <p>Try all premium features during your trial period. No limitations.</p>
+                </div>
+                <div class="feature-card glass card-3d hover-lift">
+                    <div class="feature-icon gradient-text">⏱️</div>
+                    <h3>7 Days to Decide</h3>
+                    <p>Take your time to explore all features and see if PDF Fusion Pro is right for you.</p>
+                </div>
+                <div class="feature-card glass card-3d hover-lift">
+                    <div class="feature-icon gradient-text">🔄</div>
+                    <h3>Easy to Convert</h3>
+                    <p>Seamlessly convert from trial to full version with just one click.</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--spacing-2xl);">
+                <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-primary btn-glow btn-large" target="_blank">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq glass">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="gradient-text">Frequently Asked Questions</h2>
+                <p>Find answers to common questions about PDF Fusion Pro</p>
+            </div>
+            
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">Is PDF Fusion Pro free?</div>
+                    <div class="faq-answer">
+                        <p>PDF Fusion Pro offers a 7-day full-feature free trial. After the trial, a one-time payment of $69 is required for lifetime access to all features and updates.</p>
                     </div>
                 </div>
                 
-                <div class="license-comparison">
-                    <h2>License Comparison</h2>
-                    <p>Choose the right license for your needs</p>
-                    
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Free Trial</th>
-                                <th>Personal License</th>
-                                <th>Business License</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>All conversion features</td>
-                                <td class="feature-present">7 days</td>
-                                <td class="feature-present">Lifetime</td>
-                                <td class="feature-present">Lifetime</td>
-                            </tr>
-                            <tr>
-                                <td>PDF editing & processing</td>
-                                <td class="feature-present">7 days</td>
-                                <td class="feature-present">Lifetime</td>
-                                <td class="feature-present">Lifetime</td>
-                            </tr>
-                            <tr>
-                                <td>Batch processing</td>
-                                <td class="feature-present">7 days</td>
-                                <td class="feature-present">Lifetime</td>
-                                <td class="feature-present">Lifetime</td>
-                            </tr>
-                            <tr>
-                                <td>Offline operation</td>
-                                <td class="feature-present">7 days</td>
-                                <td class="feature-present">Lifetime</td>
-                                <td class="feature-present">Lifetime</td>
-                            </tr>
-                            <tr>
-                                <td>Multiple language support</td>
-                                <td class="feature-present">7 days</td>
-                                <td class="feature-present">Lifetime</td>
-                                <td class="feature-present">Lifetime</td>
-                            </tr>
-                            <tr>
-                                <td>Number of computers</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>Commercial use</td>
-                                <td class="feature-absent">Not allowed</td>
-                                <td class="feature-absent">Not allowed</td>
-                                <td class="feature-present">Allowed</td>
-                            </tr>
-                            <tr>
-                                <td>Priority support</td>
-                                <td class="feature-absent">No</td>
-                                <td class="feature-present">Yes</td>
-                                <td class="feature-present">Yes</td>
-                            </tr>
-                            <tr>
-                                <td>Price</td>
-                                <td>FREE</td>
-                                <td>$69.99</td>
-                                <td>$199.99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div style="text-align: center; margin-top: 30px;">
-                        <p>Need a business license for your team? <a href="support.html#contact" style="color: var(--primary-color); font-weight: 600;">Contact us</a> for custom pricing.</p>
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">What systems are supported?</div>
+                    <div class="faq-answer">
+                        <p>PDF Fusion Pro is currently available for Windows 10 and Windows 11. We are working on macOS support for future releases.</p>
                     </div>
                 </div>
                 
-                <div class="faq-pricing">
-                    <h2>Pricing FAQ</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Is this really a one-time payment?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p><strong>Yes!</strong> You pay once and get a lifetime license for the major version you purchase (e.g., version 2.x). All updates within that version are free. We don't believe in charging monthly fees for software that runs on your own computer.</p>
-                        </div>
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">Is there an online version?</div>
+                    <div class="faq-answer">
+                        <p>No, PDF Fusion Pro is a desktop application that works 100% offline. This ensures your documents stay secure on your computer and never leave your device.</p>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I use it on multiple computers?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>The <strong>Personal License</strong> is for use on <strong>one computer</strong> only. If you need to use PDF Fusion on multiple computers, you'll need to purchase additional licenses or consider our <strong>Business License</strong> which covers up to 5 computers.</p>
-                        </div>
+                </div>
+                
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">How does payment work?</div>
+                    <div class="faq-answer">
+                        <p>We use Gumroad as our primary payment processor, which accepts all major credit cards. We also offer PayPal and bank transfer options for enterprise customers.</p>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What happens after version 2.x?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>When we release version 3.0 (which won't be for several years), you'll have the option to upgrade at a discounted price. However, version 2.x will continue to work perfectly, and you'll receive all security and bug fix updates for it indefinitely.</p>
-                        </div>
+                </div>
+                
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">Is there a money-back guarantee?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a 30-day money-back guarantee. If you're not satisfied with PDF Fusion Pro for any reason, simply contact us within 30 days of purchase for a full refund.</p>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Do you offer educational or nonprofit discounts?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes! We offer a 40% discount for students, teachers, and verified nonprofit organizations. Please <a href="support.html#contact">contact our sales team</a> with proof of your status to receive a discount code.</p>
-                        </div>
+                </div>
+                
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">Can I use it for business purposes?</div>
+                    <div class="faq-answer">
+                        <p>Yes, the one-time purchase allows you to use PDF Fusion Pro for both personal and business purposes. There are no additional licensing fees for business use.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">How often do you release updates?</div>
+                    <div class="faq-answer">
+                        <p>We release updates regularly to add new features, improve performance, and fix any issues. All updates are free for lifetime license holders.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass hover-lift">
+                    <div class="faq-question">What if I need help?</div>
+                    <div class="faq-answer">
+                        <p>We offer priority customer support to all license holders. You can reach us at support@getpdffusion.com for any questions or assistance.</p>
                     </div>
                 </div>
             </div>
@@ -476,72 +239,98 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="why-choose glass">
         <div class="container">
-            <div class="cta-box">
-                <h2>Ready to Escape Subscription Fees?</h2>
-                <p>Join thousands of professionals who have switched to PDF Fusion.</p>
-                <a href="download.html" class="btn btn-large">
-                    <i class="fas fa-rocket"></i> Start Your 7-Day Free Trial
-                </a>
-                <p class="guarantee">
-                    <i class="fas fa-check-circle"></i> No credit card required • 30-day money-back guarantee
+            <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title gradient-text">Ready to Get Started?</h2>
+                <p style="font-size: 1.25rem; margin-bottom: var(--spacing-2xl);">Join thousands of professionals who have transformed their PDF workflow with PDF Fusion Pro.</p>
+                <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-primary btn-glow btn-large" target="_blank">Download Free Trial</a>
+                    <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-secondary btn-glow btn-large" target="_blank">Buy Now - $69</a>
+                </div>
+                <p style="margin-top: var(--spacing-xl); color: var(--text-secondary); font-size: 0.875rem;">
+                    ✅ No credit card required • ✅ 7-day full-feature trial • ✅ 30-day money-back guarantee
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer glass">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>PDF Fusion Pro</h4>
-                    <p>The professional PDF solution that respects your privacy and budget.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                    <h4 class="gradient-text">PDF Fusion Pro</h4>
+                    <p>The ultimate all-in-one desktop PDF solution for professionals. Work offline, save time, and get professional results.</p>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <a href="https://pdfwhirl.gumroad.com/l/dvsci" target="_blank" class="btn btn-outline btn-glow" style="font-size: 0.875rem;">Buy Now - $69</a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Product</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html" class="active">Pricing</a></li>
                         <li><a href="download.html">Download</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="#">Updates</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="support.html">Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="support.html">Help Center</a></li>
-                        <li><a href="support.html#faq">FAQ</a></li>
-                        <li><a href="support.html#contact">Contact Us</a></li>
-                        <li><a href="#">Documentation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Support Email: <a href="mailto:support@getpdffusion.com" style="color: var(--text-light);">support@getpdffusion.com</a></p>
+                    <p>Business Inquiries: <a href="mailto:getpdffusion7300@gmail.com" style="color: var(--text-light);">getpdffusion7300@gmail.com</a></p>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <p style="font-size: 0.875rem;">Follow us:</p>
+                        <div style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-sm);">
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">🐦</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">📘</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">📸</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">💼</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PDF Fusion. All rights reserved. Made with <i class="fas fa-heart"></i> for PDF professionals worldwide.</p>
-                <p class="footer-languages">
-                    <i class="fas fa-globe"></i> Available in: English, Español, Français, Deutsch, Italiano, 日本語, 中文, and 15+ more
-                </p>
+                <p>&copy; 2026 PDF Fusion Pro. All rights reserved. | <a href="https://www.getpdffusion.com/" style="color: var(--text-light);">www.getpdffusion.com</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- FAQ Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('active');
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        question.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

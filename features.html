@@ -3,484 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Fusion Features | Complete PDF Converter & Editor Tool</title>
-    <meta name="description" content="Explore all features of PDF Fusion: PDF to Word converter, batch processing, encryption, watermarking, and more. Offline software with 20+ languages.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* 功能页面特有样式 */
-        .page-header {
-            padding-top: 140px;
-            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
-            text-align: center;
-            padding-bottom: 60px;
-        }
-        
-        .page-header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .page-header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            color: var(--gray-color);
-        }
-        
-        .detailed-features {
-            padding: 80px 0;
-        }
-        
-        .feature-category {
-            margin-bottom: 80px;
-        }
-        
-        .feature-category h2 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .feature-category h2 i {
-            color: var(--primary-color);
-        }
-        
-        .feature-category > p {
-            font-size: 1.1rem;
-            color: var(--gray-color);
-            margin-bottom: 40px;
-        }
-        
-        .feature-detail-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
-        }
-        
-        @media (max-width: 600px) {
-            .feature-detail-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .feature-detail {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f0f0;
-            display: flex;
-            gap: 25px;
-            transition: var(--transition);
-        }
-        
-        .feature-detail:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .detail-icon {
-            flex-shrink: 0;
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: white;
-        }
-        
-        .detail-content {
-            flex: 1;
-        }
-        
-        .detail-content h3 {
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-        
-        .detail-content p {
-            margin-bottom: 15px;
-            color: var(--gray-color);
-        }
-        
-        .detail-content ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-        
-        .detail-content ul li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .detail-content ul li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success-color);
-            font-weight: bold;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #4361ee, #3a56d4);
-            color: white;
-            border-radius: 20px;
-            padding: 50px;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-top: 60px;
-        }
-        
-        @media (max-width: 900px) {
-            .highlight-box {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-        
-        .highlight-content {
-            flex: 1;
-        }
-        
-        .highlight-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .highlight-content h3 i {
-            color: #4cc9f0;
-        }
-        
-        .highlight-list {
-            list-style: none;
-            margin-top: 25px;
-        }
-        
-        .highlight-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .highlight-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .highlight-image {
-            flex: 1;
-        }
-        
-        .highlight-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-        
-        .cta-simple {
-            text-align: center;
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-        
-        .cta-simple h2 {
-            margin-bottom: 20px;
-        }
-        
-        .cta-simple p {
-            max-width: 600px;
-            margin: 0 auto 40px;
-            color: var(--gray-color);
-        }
-        
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        @media (max-width: 500px) {
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-	
-	  <!-- Umami 实时统计 -->
-    
-<script defer src="https://cloud.umami.is/script.js" data-website-id="af4a97d5-e094-4596-93d7-6a150aaf3759"></script>
-    
-    <!-- Google Analytics 深度分析 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFFX5DDCTG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-3SEL3Y07W8');
-        
-        // 跟踪下载事件
-        function trackDownload(fileName) {
-            umami.track('download', { file: fileName });
-            gtag('event', 'download', {
-                'event_category': 'engagement',
-                'event_label': fileName
-            });
-        }
-    </script>
-
+    <title>PDF Fusion Pro Features: All-in-One PDF Tool</title>
+    <meta name="description" content="Explore all the powerful features of PDF Fusion Pro - the ultimate all-in-one desktop PDF solution. Convert, edit, batch process, secure, and OCR PDFs with ease.">
+    <meta name="keywords" content="PDF Fusion Pro features, PDF converter features, PDF editor features, batch PDF processing, PDF security, PDF OCR, PDF editing tools, PDF conversion tools">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 完整导航部分 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?w=100&auto=format&fit=crop" alt="PDF Fusion Logo">
-                <span>PDF Fusion Pro</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html" class="active">Features</a></li>
-                <li><a href="download.html">Download</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="support.html">Support</a></li>
-                <li class="language-selector">
-                    <i class="fas fa-globe"></i>
-                    <span>EN</span>
-                </li>
-            </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Features Header -->
-    <section class="page-header">
+
+    <!-- Header Navigation -->
+    <header class="header glass">
         <div class="container">
-            <h1>Powerful Features for Every PDF Task</h1>
-            <p>Discover why PDF Fusion is the most comprehensive offline PDF solution</p>
-            <a href="download.html" class="btn btn-primary">
-                <i class="fas fa-download"></i> Try All Features Free for 7 Days
-            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-logo gradient-text">PDF Fusion Pro</a>
+                <ul class="nav-links">
+                    <li><a href="features.html" class="active">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-outline" target="_blank">Free Trial</a>
+                    <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-primary btn-glow" target="_blank">Buy Now - $69</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" style="max-width: 100%; text-align: center;">
+                    <h1 class="gradient-text">Everything You Need in One PDF Tool</h1>
+                    <p class="hero-subtitle">Powerful features to handle all your PDF needs - convert, edit, batch process, secure, and more.</p>
+                    <div class="hero-cta" style="justify-content: center;">
+                        <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-primary btn-glow btn-large" target="_blank">Download Free Trial</a>
+                        <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-secondary btn-glow btn-large" target="_blank">Buy Now - $69</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Conversion Features -->
-    <section class="detailed-features">
+    <!-- Features Section -->
+    <section class="features-page">
         <div class="container">
-            <div class="feature-category">
-                <h2><i class="fas fa-exchange-alt"></i> PDF Conversion</h2>
-                <p>Convert any PDF to editable formats with perfect formatting preservation</p>
-                
-                <div class="feature-detail-grid">
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-file-word"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>PDF to Word</h3>
-                            <p>Convert PDF to fully editable Microsoft Word documents (.docx) with text, images, and formatting intact.</p>
-                            <ul>
-                                <li>Preserves fonts and layout</li>
-                                <li>Maintains tables and lists</li>
-                                <li>Supports complex documents</li>
-                                <li>Batch convert multiple files</li>
-                            </ul>
-                        </div>
+            <!-- Convert Section -->
+            <div class="feature-section">
+                <h2 class="section-title gradient-text">🔄 Convert PDFs to Any Format</h2>
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <p>Seamlessly convert PDFs to and from various formats while preserving original formatting, layouts, fonts, and images.</p>
+                        <ul class="feature-list">
+                            <li>PDF to Word (.docx) - Editable Word documents with preserved formatting</li>
+                            <li>PDF to Excel (.xlsx) - Accurate spreadsheet conversion with tables intact</li>
+                            <li>PDF to PowerPoint (.pptx) - Professional presentations with original graphics</li>
+                            <li>PDF to Images (JPG, PNG, BMP, TIFF) - High-quality image exports</li>
+                            <li>PDF to HTML - Interactive web pages with hyperlinks preserved</li>
+                            <li>PDF to Plain Text (.txt) - Extract text content easily</li>
+                            <li>Images to PDF - Combine multiple images into a single PDF</li>
+                            <li>Word/Excel/PPT to PDF - Create professional PDFs from office documents</li>
+                        </ul>
+                        <p>Our advanced conversion engine ensures the highest quality results, saving you time and effort in manual formatting.</p>
                     </div>
-                    
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-file-excel"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>PDF to Excel</h3>
-                            <p>Extract tables and data from PDFs into editable Excel spreadsheets (.xlsx).</p>
-                            <ul>
-                                <li>Recognizes table structures</li>
-                                <li>Preserves formulas and formatting</li>
-                                <li>Batch convert multiple PDFs</li>
-                                <li>Export to CSV option</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-file-powerpoint"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>PDF to PowerPoint</h3>
-                            <p>Convert PDF presentations to editable PowerPoint slides with animations and layouts preserved.</p>
-                            <ul>
-                                <li>Maintains slide structure</li>
-                                <li>Preserves images and graphics</li>
-                                <li>Retains text formatting</li>
-                                <li>Export individual slides</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>PDF to HTML & Images</h3>
-                            <p>Export PDFs as web-ready HTML or high-quality image formats for various uses.</p>
-                            <ul>
-                                <li>PDF to HTML for web publishing</li>
-                                <li>PDF to JPG, PNG, TIFF, BMP</li>
-                                <li>Convert images to PDF</li>
-                                <li>Adjust image quality and DPI</li>
-                            </ul>
-                        </div>
+                    <div class="feature-image glass card-3d">
+                        <img src="images/PIC101.png" alt="PDF Conversion" style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-lg); background-color: rgba(255, 255, 255, 0.1);">
                     </div>
                 </div>
             </div>
-            
-            <!-- Processing Features -->
-            <div class="feature-category">
-                <h2><i class="fas fa-cogs"></i> PDF Processing</h2>
-                <p>Advanced tools for editing, securing, and organizing your PDFs</p>
-                
-                <div class="feature-detail-grid">
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>Encryption & Security</h3>
-                            <p>Protect sensitive documents with military-grade 256-bit AES encryption.</p>
-                            <ul>
-                                <li>Add/remove passwords</li>
-                                <li>Set document permissions</li>
-                                <li>Restrict printing, copying, editing</li>
-                                <li>Batch encrypt multiple files</li>
-                                <li>128-bit and 256-bit encryption options</li>
-                            </ul>
-                        </div>
+
+            <!-- Edit & Modify Section -->
+            <div class="feature-section">
+                <h2 class="section-title gradient-text">✏️ Edit & Modify PDF Content</h2>
+                <div class="feature-content">
+                    <div class="feature-image glass card-3d">
+                        <img src="images/PIC102.png" alt="PDF Editing" style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-lg); background-color: rgba(255, 255, 255, 0.1);">
                     </div>
-                    
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-tint"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>Watermark Management</h3>
-                            <p>Add professional watermarks to protect your intellectual property.</p>
-                            <ul>
-                                <li>Text and image watermarks</li>
-                                <li>Custom positioning and opacity</li>
-                                <li>Batch watermark hundreds of files</li>
-                                <li>Rotation and scaling options</li>
-                                <li>Multiple watermark layers</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-object-group"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>Merge & Split</h3>
-                            <p>Combine multiple PDFs into one document or split large PDFs into smaller files.</p>
-                            <ul>
-                                <li>Merge multiple PDFs into one</li>
-                                <li>Split by page range</li>
-                                <li>Extract specific pages</li>
-                                <li>Batch merge folders of PDFs</li>
-                                <li>Drag-and-drop interface</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>Text & Page Management</h3>
-                            <p>Edit and organize PDF content with precision tools.</p>
-                            <ul>
-                                <li>Add, delete, reorder pages</li>
-                                <li>Rotate and crop pages</li>
-                                <li>Extract text content</li>
-                                <li>Add headers and footers</li>
-                                <li>Page numbering options</li>
-                            </ul>
-                        </div>
+                    <div class="feature-text">
+                        <p>Comprehensive editing tools to modify PDFs exactly how you need them.</p>
+                        <ul class="feature-list">
+                            <li>Merge PDFs - Combine multiple PDF files into one</li>
+                            <li>Split PDFs - Extract specific pages or split by page ranges</li>
+                            <li>Rotate Pages - Rotate individual pages or entire documents</li>
+                            <li>Reorder Pages - Rearrange pages to your desired sequence</li>
+                            <li>Delete Pages - Remove unwanted pages from PDFs</li>
+                            <li>Extract Pages - Save specific pages as separate PDF files</li>
+                            <li>Add Watermarks - Protect your documents with text or image watermarks</li>
+                            <li>Add Headers & Footers - Include page numbers, dates, and custom text</li>
+                            <li>Resize PDF Pages - Adjust page sizes for different purposes</li>
+                        </ul>
+                        <p>With our intuitive editing interface, you can make professional edits to your PDFs in just a few clicks.</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Batch Processing Highlight -->
-            <div class="highlight-box">
-                <div class="highlight-content">
-                    <h3><i class="fas fa-bolt"></i> Batch Processing Superpowers</h3>
-                    <p>Process hundreds of PDF files simultaneously with our powerful batch engine</p>
-                    <ul class="highlight-list">
-                        <li><strong>Convert:</strong> Convert multiple PDFs to Word, Excel, PPT, Images, HTML, TXT</li>
-                        <li><strong>Watermark:</strong> Add watermarks to entire folders of PDFs with one click</li>
-                        <li><strong>Encrypt/Decrypt:</strong> Secure or unlock multiple files at once</li>
-                        <li><strong>Merge/Split:</strong> Combine or separate multiple documents in batch mode</li>
-                        <li><strong>OCR Processing:</strong> Convert scanned documents across entire folders</li>
-                    </ul>
-                </div>
-                <div class="highlight-image">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&auto=format&fit=crop" alt="Batch Processing Interface">
+
+            <!-- Batch Processing Section -->
+            <div class="feature-section">
+                <h2 class="section-title gradient-text">⚡ Batch Process Hundreds of Files</h2>
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <p>Save hours of manual work with powerful batch processing capabilities. Process entire folders of PDF files in one go.</p>
+                        <ul class="feature-list">
+                            <li>Batch Convert - Convert multiple PDFs to other formats simultaneously</li>
+                            <li>Batch Merge - Combine multiple folders of PDFs into organized documents</li>
+                            <li>Batch Split - Split multiple PDFs by page ranges or bookmarks</li>
+                            <li>Batch Watermark - Add consistent watermarks to hundreds of PDFs</li>
+                            <li>Batch Compress - Reduce file size for multiple PDFs at once</li>
+                            <li>Batch Encrypt - Secure multiple PDFs with passwords</li>
+                            <li>Batch Rotate - Rotate pages in multiple PDFs</li>
+                            <li>Batch Rename - Automatically rename output files with custom patterns</li>
+                        </ul>
+                        <p>Set up your batch process once and let PDF Fusion Pro handle the rest, freeing you to focus on more important tasks.</p>
+                    </div>
+                    <div class="feature-image glass card-3d">
+                        <img src="images/PIC103.png" alt="Batch Processing" style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-lg); background-color: rgba(255, 255, 255, 0.1);">
+                    </div>
                 </div>
             </div>
-            
-            <!-- Advanced Features -->
-            <div class="feature-category">
-                <h2><i class="fas fa-magic"></i> Advanced Features</h2>
-                <p>Professional tools for power users and businesses</p>
-                
-                <div class="feature-detail-grid">
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>OCR Technology</h3>
-                            <p>Convert scanned PDFs and images into searchable, editable documents.</p>
-                            <ul>
-                                <li>Recognize text in scanned documents</li>
-                                <li>Support for 50+ languages</li>
-                                <li>Preserve original layout</li>
-                                <li>Batch OCR processing</li>
-                            </ul>
-                        </div>
+
+            <!-- Security & OCR Section -->
+            <div class="feature-section">
+                <h2 class="section-title gradient-text">🛡️ Security & OCR Technology</h2>
+                <div class="feature-content">
+                    <div class="feature-image glass card-3d">
+                        <img src="images/PIC104.png" alt="PDF Security" style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-lg); background-color: rgba(255, 255, 255, 0.1);">
                     </div>
-                    
-                    <div class="feature-detail">
-                        <div class="detail-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <div class="detail-content">
-                            <h3>Multi-language Support</h3>
-                            <p>Full interface and processing support for international users.</p>
-                            <ul>
-                                <li>20+ language interfaces</li>
-                                <li>Unicode text support</li>
-                                <li>Right-to-left language support</li>
-                                <li>Asian character recognition</li>
-                            </ul>
-                        </div>
+                    <div class="feature-text">
+                        <p>Protect your sensitive documents and unlock scanned PDFs with advanced security features and OCR technology.</p>
+                        <ul class="feature-list">
+                            <li>Password Protection - Secure PDFs with strong encryption</li>
+                            <li>Permission Management - Control printing, copying, and editing rights</li>
+                            <li>Redaction Tools - Permanently remove sensitive information</li>
+                            <li>Digital Signatures - Add and verify digital signatures</li>
+                            <li>OCR (Optical Character Recognition) - Convert scanned PDFs to editable text</li>
+                            <li>Multi-language OCR Support - Recognize text in over 20 languages</li>
+                            <li>Searchable PDFs - Make scanned documents searchable and editable</li>
+                            <li>Batch OCR - Process multiple scanned PDFs at once</li>
+                        </ul>
+                        <p>Keep your documents secure and accessible with our comprehensive security and OCR features.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Tools Section -->
+            <div class="feature-section">
+                <h2 class="section-title gradient-text">🔧 Advanced PDF Tools</h2>
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <p>Access advanced tools for professional PDF workflows and specialized tasks.</p>
+                        <ul class="feature-list">
+                            <li>PDF Creation - Create PDFs from scratch or combine multiple file types</li>
+                            <li>PDF Comparison - Compare two PDFs and highlight differences</li>
+                            <li>PDF Optimization - Reduce file size without losing quality</li>
+                            <li>PDF Repair - Fix corrupted or damaged PDF files</li>
+                            <li>PDF Metadata Editor - Edit document properties and metadata</li>
+                            <li>Bookmark Management - Add, edit, and organize bookmarks</li>
+                            <li>Hyperlink Editing - Add, edit, and remove hyperlinks</li>
+                            <li>Annotation Tools - Add comments, highlights, and notes to PDFs</li>
+                            <li>Form Creation & Editing - Create and edit interactive PDF forms</li>
+                        </ul>
+                        <p>Take your PDF workflow to the next level with our advanced tools designed for professionals.</p>
+                    </div>
+                    <div class="feature-image glass card-3d">
+                        <img src="images/PIC105.png" alt="Advanced PDF Tools" style="width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-lg); background-color: rgba(255, 255, 255, 0.1);">
                     </div>
                 </div>
             </div>
@@ -488,72 +179,74 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-simple">
+    <section class="why-choose glass">
         <div class="container">
-            <h2>Ready to Experience Full PDF Control?</h2>
-            <p>Download the 7-day free trial and discover why professionals choose PDF Fusion.</p>
-            <div class="cta-buttons">
-                <a href="download.html" class="btn btn-large">
-                    <i class="fas fa-download"></i> Download Free Trial
-                </a>
-                <a href="pricing.html" class="btn btn-secondary">
-                    <i class="fas fa-tag"></i> View Pricing
-                </a>
+            <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title gradient-text">Ready to Experience the Power of PDF Fusion Pro?</h2>
+                <p style="font-size: 1.25rem; margin-bottom: var(--spacing-2xl);">Try all these features and more with our 7-day full-feature free trial.</p>
+                <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-primary btn-glow btn-large" target="_blank">Download Free Trial</a>
+                    <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-secondary btn-glow btn-large" target="_blank">Buy Now - $69</a>
+                </div>
+                <p style="margin-top: var(--spacing-xl); color: var(--text-secondary); font-size: 0.875rem;">
+                    ✅ No credit card required • ✅ 7-day full-feature trial • ✅ 30-day money-back guarantee
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer glass">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>PDF Fusion Pro</h4>
-                    <p>The professional PDF solution that respects your privacy and budget.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                    <h4 class="gradient-text">PDF Fusion Pro</h4>
+                    <p>The ultimate all-in-one desktop PDF solution for professionals. Work offline, save time, and get professional results.</p>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <a href="https://pdfwhirl.gumroad.com/l/dvsci" target="_blank" class="btn btn-outline btn-glow" style="font-size: 0.875rem;">Buy Now - $69</a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Product</h4>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="download.html">Download</a></li>
+                    <ul class="footer-links">
+                        <li><a href="features.html" class="active">Features</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="#">Updates</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="support.html">Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="support.html">Help Center</a></li>
-                        <li><a href="support.html#faq">FAQ</a></li>
-                        <li><a href="support.html#contact">Contact Us</a></li>
-                        <li><a href="#">Documentation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Support Email: <a href="mailto:support@getpdffusion.com" style="color: var(--text-light);">support@getpdffusion.com</a></p>
+                    <p>Business Inquiries: <a href="mailto:getpdffusion7300@gmail.com" style="color: var(--text-light);">getpdffusion7300@gmail.com</a></p>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <p style="font-size: 0.875rem;">Follow us:</p>
+                        <div style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-sm);">
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">🐦</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">📘</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">📸</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">💼</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PDF Fusion. All rights reserved. Made with <i class="fas fa-heart"></i> for PDF professionals worldwide.</p>
-                <p class="footer-languages">
-                    <i class="fas fa-globe"></i> Available in: English, Español, Français, Deutsch, Italiano, 日本語, 中文, and 15+ more
-                </p>
+                <p>&copy; 2026 PDF Fusion Pro. All rights reserved. | <a href="https://www.getpdffusion.com/" style="color: var(--text-light);">www.getpdffusion.com</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
 </body>
 </html>

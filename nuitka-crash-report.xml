@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='utf8'?>
+<nuitka-compilation-report nuitka_version="2.4.5" nuitka_commercial_version="not installed" completion="error exit message (1)" exit_message="Failed unexpectedly in Scons C backend compilation.">
+  <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="${cwd}\main.py" distribution="PyMuPDF">
+    <optimization-time pass="1" time="1.22" micro_passes="7" max_branch_merge="650" merged_total="47550" />
+    <optimization-time pass="2" time="0.15" micro_passes="1" max_branch_merge="648" merged_total="6708" />
+    <module_usages>
+      <module_usage name="site" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="_virtualenv" finding="absolute" line="1" />
+      <module_usage name="pywin32_bootstrap" finding="absolute" line="1" />
+      <module_usage name="base64" finding="excluded" line="2" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="glob" finding="excluded" line="3" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="locale" finding="excluded" line="4" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="shutil" finding="excluded" line="5" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="sys" finding="absolute" line="6" />
+      <module_usage name="tabula" finding="absolute" line="7" />
+      <module_usage name="pandas" finding="absolute" line="8" />
+      <module_usage name="PyPDF2.errors" finding="absolute" line="9" />
+      <module_usage name="PyQt5.QtWidgets" finding="excluded" line="10" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5" finding="absolute" line="12" />
+      <module_usage name="PyQt5.QtCore" finding="excluded" line="12" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtGui" finding="excluded" line="13" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtWidgets" finding="excluded" line="14" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtCore" finding="excluded" line="16" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtGui" finding="excluded" line="17" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtGui" finding="excluded" line="18" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="qtawesome" finding="absolute" line="19" />
+      <module_usage name="pdf2docx" finding="absolute" line="20" />
+      <module_usage name="pdf2docx.Converter" finding="not-found" line="20" />
+      <module_usage name="subprocess" finding="excluded" line="22" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="tqdm" finding="absolute" line="23" />
+      <module_usage name="tqdm.tqdm" finding="not-found" line="23" />
+      <module_usage name="gettext" finding="excluded" line="24" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="tkinter" finding="excluded" line="26" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="tkinter" finding="excluded" line="27" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="tkinter.filedialog" finding="relative" line="27" />
+      <module_usage name="pdfplumber" finding="absolute" line="29" />
+      <module_usage name="openpyxl" finding="absolute" line="30" />
+      <module_usage name="openpyxl.Workbook" finding="not-found" line="30" />
+      <module_usage name="os" finding="excluded" line="31" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="math" finding="absolute" line="33" />
+      <module_usage name="pdfplumber" finding="absolute" line="35" />
+      <module_usage name="xlwt" finding="absolute" line="36" />
+      <module_usage name="PyPDF2" finding="absolute" line="38" />
+      <module_usage name="PyPDF2" finding="absolute" line="39" />
+      <module_usage name="PyPDF2.PdfReader" finding="not-found" line="39" />
+      <module_usage name="PyPDF2.PdfWriter" finding="not-found" line="39" />
+      <module_usage name="PyPDF2" finding="absolute" line="40" />
+      <module_usage name="PyPDF2.PdfReader" finding="not-found" line="40" />
+      <module_usage name="PyPDF2.PdfWriter" finding="not-found" line="40" />
+      <module_usage name="reportlab.pdfgen" finding="absolute" line="41" />
+      <module_usage name="reportlab.pdfgen.canvas" finding="relative" line="41" />
+      <module_usage name="reportlab.lib.pagesizes" finding="absolute" line="42" />
+      <module_usage name="reportlab.pdfbase" finding="absolute" line="43" />
+      <module_usage name="reportlab.pdfbase.pdfmetrics" finding="relative" line="43" />
+      <module_usage name="reportlab.pdfbase.ttfonts" finding="absolute" line="44" />
+      <module_usage name="spire.pdf.common" finding="absolute" line="46" />
+      <module_usage name="spire.pdf" finding="absolute" line="47" />
+      <module_usage name="fitz" finding="absolute" line="49" />
+      <module_usage name="bs4" finding="absolute" line="50" />
+      <module_usage name="bs4.BeautifulSoup" finding="not-found" line="50" />
+      <module_usage name="PyPDF2" finding="absolute" line="54" />
+      <module_usage name="PyPDF2.PdfReader" finding="not-found" line="54" />
+      <module_usage name="PyPDF2.PdfWriter" finding="not-found" line="54" />
+      <module_usage name="reportlab.lib.pagesizes" finding="absolute" line="55" />
+      <module_usage name="reportlab.pdfgen" finding="absolute" line="56" />
+      <module_usage name="reportlab.pdfgen.canvas" finding="relative" line="56" />
+      <module_usage name="reportlab.lib.utils" finding="absolute" line="57" />
+      <module_usage name="io" finding="excluded" line="59" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="PIL" finding="absolute" line="60" />
+      <module_usage name="PIL.Image" finding="relative" line="60" />
+      <module_usage name="fitz" finding="absolute" line="61" />
+      <module_usage name="pptx" finding="absolute" line="62" />
+      <module_usage name="pptx.Presentation" finding="not-found" line="62" />
+      <module_usage name="pptx.util" finding="absolute" line="63" />
+      <module_usage name="pptx" finding="absolute" line="66" />
+      <module_usage name="pptx.Presentation" finding="not-found" line="66" />
+      <module_usage name="pptx.util" finding="absolute" line="67" />
+      <module_usage name="PIL" finding="absolute" line="68" />
+      <module_usage name="PIL.Image" finding="relative" line="68" />
+      <module_usage name="pptx" finding="absolute" line="71" />
+      <module_usage name="pptx.util" finding="absolute" line="72" />
+      <module_usage name="math" finding="absolute" line="74" />
+      <module_usage name="io" finding="excluded" line="75" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="os" finding="excluded" line="78" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pdfminer.high_level" finding="absolute" line="79" />
+      <module_usage name="pdfplumber" finding="absolute" line="80" />
+      <module_usage name="glob" finding="excluded" line="81" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="PyPDF2" finding="absolute" line="82" />
+      <module_usage name="threading" finding="excluded" line="83" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pdf2image" finding="absolute" line="85" />
+      <module_usage name="pdf2image.convert_from_path" finding="not-found" line="85" />
+      <module_usage name="io" finding="excluded" line="88" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="PyQt5.QtWidgets" finding="excluded" line="90" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtCore" finding="excluded" line="91" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtGui" finding="excluded" line="92" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="webbrowser" finding="excluded" line="93" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="configparser" finding="excluded" line="96" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="os" finding="excluded" line="97" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="sys" finding="absolute" line="98" />
+      <module_usage name="threading" finding="excluded" line="99" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="time" finding="absolute" line="100" />
+      <module_usage name="numpy" finding="absolute" line="101" />
+      <module_usage name="functools" finding="excluded" line="103" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="PyQt5.QtCore" finding="excluded" line="106" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtWidgets" finding="excluded" line="107" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="authsdk" finding="absolute" line="109" />
+      <module_usage name="PyPDF2" finding="absolute" line="111" />
+      <module_usage name="spire.pdf" finding="absolute" line="113" />
+      <module_usage name="spire.pdf.common" finding="absolute" line="114" />
+      <module_usage name="math" finding="absolute" line="115" />
+      <module_usage name="tkinter" finding="excluded" line="118" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="tkinter.simpledialog" finding="relative" line="118" />
+      <module_usage name="tkinter.simpledialog" finding="absolute" line="119" />
+      <module_usage name="fitz" finding="absolute" line="120" />
+      <module_usage name="tkinter" finding="excluded" line="121" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="tkinter.messagebox" finding="relative" line="121" />
+      <module_usage name="PIL" finding="absolute" line="122" />
+      <module_usage name="PIL.Image" finding="relative" line="122" />
+      <module_usage name="PyPDF2" finding="absolute" line="124" />
+      <module_usage name="PyPDF2.PdfReader" finding="not-found" line="124" />
+      <module_usage name="PyPDF2.PdfWriter" finding="not-found" line="124" />
+      <module_usage name="reportlab.pdfgen" finding="absolute" line="125" />
+      <module_usage name="reportlab.pdfgen.canvas" finding="relative" line="125" />
+      <module_usage name="reportlab.lib.pagesizes" finding="absolute" line="126" />
+      <module_usage name="reportlab.lib.colors" finding="absolute" line="127" />
+      <module_usage name="os" finding="excluded" line="129" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="random" finding="excluded" line="130" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="reportlab.pdfgen" finding="absolute" line="132" />
+      <module_usage name="reportlab.pdfgen.canvas" finding="relative" line="132" />
+      <module_usage name="reportlab.lib.pagesizes" finding="absolute" line="133" />
+      <module_usage name="reportlab.lib.colors" finding="absolute" line="134" />
+      <module_usage name="reportlab.pdfgen" finding="absolute" line="136" />
+      <module_usage name="reportlab.pdfgen.canvas" finding="relative" line="136" />
+      <module_usage name="reportlab.pdfbase" finding="absolute" line="137" />
+      <module_usage name="reportlab.pdfbase.pdfmetrics" finding="relative" line="137" />
+      <module_usage name="reportlab.pdfbase.ttfonts" finding="absolute" line="138" />
+      <module_usage name="PyQt5.QtCore" finding="excluded" line="140" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="PyQt5.QtGui" finding="excluded" line="141" exclusion_reason="Extension modules cannot be inspected." />
+      <module_usage name="os" finding="excluded" line="143" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="gettext" finding="excluded" line="144" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="hashlib" finding="excluded" line="145" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="ntpath" finding="excluded" line="395" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="ntpath" finding="excluded" line="402" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="ntpath" finding="excluded" line="677" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="ntpath" finding="excluded" line="692" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="qtawesome" finding="absolute" line="1485" />
+      <module_usage name="qtawesome.icon_browser" finding="relative" line="1485" />
+      <module_usage name="ntpath" finding="excluded" line="2735" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="ntpath" finding="excluded" line="3701" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="ntpath" finding="excluded" line="3702" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <performance>
+    <memory_usage name="after_launch" value="39366656" />
+    <memory_usage name="before_c_code_generation" value="50774016" />
+    <memory_usage name="before_running_scons" value="55222272" />
+  </performance>
+  <data_composer blob_size="49116" total="1349">
+    <module_data filename="__bytecode.const" input_size="0" blob_name=".bytecode" blob_size="3" />
+    <module_data filename="__constants.const" input_size="2142" blob_name="" blob_size="896" />
+    <module_data filename="module.__main__.const" input_size="61698" blob_name="__main__" blob_size="48177" />
+  </data_composer>
+  <command_line>
+    <option value="main.py" />
+  </command_line>
+  <plugins>
+    <plugin name="anti-bloat" user_enabled="no" />
+    <plugin name="eventlet" user_enabled="no" />
+    <plugin name="gi" user_enabled="no" />
+    <plugin name="implicit-imports" user_enabled="no" />
+    <plugin name="multiprocessing" user_enabled="no" />
+    <plugin name="options-nanny" user_enabled="no" />
+    <plugin name="pkg-resources" user_enabled="no" />
+    <plugin name="transformers" user_enabled="no" />
+  </plugins>
+  <distributions>
+    <distribution name="PyMuPDF" version="1.24.7" installer="pip" />
+  </distributions>
+  <python python_exe="${sys.prefix}\Scripts\python.exe" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64">
+    <search_path>
+      <path value="${cwd}" />
+      <path value="${sys.real_prefix}\DLLs" />
+      <path value="${sys.real_prefix}\lib" />
+      <path value="${sys.real_prefix}" />
+      <path value="${sys.prefix}" />
+      <path value="${sys.prefix}\lib\site-packages" />
+      <path value="${sys.prefix}\lib\site-packages\win32" />
+      <path value="${sys.prefix}\lib\site-packages\win32\lib" />
+      <path value="${sys.prefix}\lib\site-packages\Pythonwin" />
+    </search_path>
+  </python>
+  <output run_filename="${cwd}\main.cmd" />
+</nuitka-compilation-report>

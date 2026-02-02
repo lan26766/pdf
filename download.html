@@ -3,766 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download PDF Fusion | 7-Day Free Trial & Lifetime License</title>
-    <meta name="description" content="Download PDF Fusion free trial for 7 days. Offline PDF converter and editor with 20+ languages. One-time purchase, lifetime updates.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	
-	  <!-- Umami 实时统计 -->
-    
-<script defer src="https://cloud.umami.is/script.js" data-website-id="af4a97d5-e094-4596-93d7-6a150aaf3759"></script>
-    
-    <!-- Google Analytics 深度分析 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFFX5DDCTG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-JFFX5DDCTG');
-        
-        // 跟踪下载事件
-        function trackDownload(fileName) {
-            umami.track('download', { file: fileName });
-            gtag('event', 'download', {
-                'event_category': 'engagement',
-                'event_label': fileName
-            });
-        }
-    </script>
-
-    <style>
-        /* 下载页面特有样式 */
-        .download-header {
-            padding-top: 140px;
-            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
-            padding-bottom: 60px;
-        }
-        
-        .download-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .download-intro h1 {
-            margin-bottom: 20px;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--gray-color);
-            margin-bottom: 50px;
-        }
-        
-        .download-steps {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-        
-        @media (max-width: 768px) {
-            .download-steps {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        
-        .step {
-            flex: 1;
-            max-width: 300px;
-            text-align: center;
-        }
-        
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-        }
-        
-        .step-content h3 {
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-        
-        .download-options {
-            padding: 80px 0;
-        }
-        
-        .platform-selector {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .platform-selector h2 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .platform-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .platform-tab {
-            padding: 15px 40px;
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .platform-tab:hover {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-        
-        .platform-tab.active {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-        
-        .platform-content {
-            display: none;
-        }
-        
-        .platform-content.active {
-            display: block;
-        }
-        
-        .platform-info {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        
-        @media (max-width: 900px) {
-            .platform-info {
-                flex-direction: column;
-            }
-        }
-        
-        .system-requirements {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .system-requirements h3 {
-            margin-bottom: 20px;
-            color: var(--dark-color);
-        }
-        
-        .system-requirements ul {
-            list-style: none;
-        }
-        
-        .system-requirements li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .system-requirements li:last-child {
-            border-bottom: none;
-        }
-        
-        .system-requirements i {
-            color: var(--success-color);
-        }
-        
-        .download-card {
-            flex: 1;
-            min-width: 300px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .version-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .version-badge {
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-        
-        .release-date {
-            color: var(--gray-color);
-            font-size: 0.9rem;
-        }
-        
-        .file-info {
-            margin: 25px 0;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-        }
-        
-        .file-info p {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .download-btn {
-            width: 100%;
-            padding: 20px;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-        
-        .download-note {
-            font-size: 0.9rem;
-            color: var(--gray-color);
-        }
-        
-        .pricing-preview {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-        
-        .pricing-preview h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .pricing-card {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 2px solid #e0e0e0;
-        }
-        
-        .pricing-header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .pricing-header h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-        
-        .pricing-header .price-display {
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .original-price {
-            font-size: 1.5rem;
-            color: var(--gray-color);
-            text-decoration: line-through;
-        }
-        
-        .current-price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-        
-        .discount-badge {
-            background: var(--accent-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .price-note {
-            color: var(--gray-color);
-            font-size: 0.9rem;
-        }
-        
-        .pricing-features {
-            margin: 30px 0;
-        }
-        
-        .pricing-features ul {
-            list-style: none;
-        }
-        
-        .pricing-features li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .pricing-features i {
-            color: var(--success-color);
-        }
-        
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            font-size: 2rem;
-            margin-top: 20px;
-            color: var(--gray-color);
-        }
-        
-        .faq-section {
-            padding: 80px 0;
-        }
-        
-        .faq-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-    </style>
+    <title>Download PDF Fusion Pro - Free Trial | Windows PDF Software</title>
+    <meta name="description" content="Download PDF Fusion Pro for Windows. 7-day full-feature free trial. No credit card required. Get started with the ultimate all-in-one PDF solution today.">
+    <meta name="keywords" content="download PDF Fusion Pro, PDF Fusion Pro free trial, PDF software download, Windows PDF software, PDF Fusion Pro installation, get PDF Fusion Pro">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 完整导航部分 -->
-    <nav class="navbar">
+
+
+    <!-- Header Navigation -->
+    <header class="header glass">
         <div class="container">
-            <div class="logo">
-                <img src="https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?w=100&auto=format&fit=crop" alt="PDF Fusion Logo">
-                <span>PDF Fusion Pro</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="download.html" class="active">Download</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="support.html">Support</a></li>
-                <li class="language-selector">
-                    <i class="fas fa-globe"></i>
-                    <span>EN</span>
-                </li>
-            </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
+            <nav class="nav">
+                <a href="index.html" class="nav-logo gradient-text">PDF Fusion Pro</a>
+                <ul class="nav-links">
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="download.html" class="active">Download</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-outline" target="_blank">Free Trial</a>
+                    <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-primary btn-glow" target="_blank">Buy Now - $69</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" style="max-width: 100%; text-align: center;">
+                    <h1 class="gradient-text">Download PDF Fusion Pro</h1>
+                    <p class="hero-subtitle">Get started with our 7-day full-feature free trial. No credit card required. Works 100% offline on Windows.</p>
+                    <div class="hero-cta" style="justify-content: center;">
+                        <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-primary btn-glow btn-large animate-pulse" target="_blank">Download Free Trial</a>
+                        <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-secondary btn-glow btn-large" target="_blank">Buy Now - $69</a>
+                    </div>
+                    <div style="color: var(--text-secondary); font-size: 0.875rem; margin-top: var(--spacing-lg);">
+                        ✅ Version 5.2.1 • ✅ 100% Safe & Secure • ✅ Windows 10/11 Compatible
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Download image -->
+                    <img src="images/pic106.png" alt="Download PDF Fusion Pro" style="width: 100%; height: 400px; object-fit: contain; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); background-color: rgba(255, 255, 255, 0.1);">
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Download Header -->
-    <section class="download-header">
+    <!-- Download Steps Section -->
+    <section class="features">
         <div class="container">
-            <div class="download-intro">
-                <h1>Get PDF Fusion Today</h1>
-                <p class="subtitle">Experience the complete PDF suite free for 7 days. No credit card required.</p>
-                
-                <div class="download-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Download Free Trial</h3>
-                            <p>Get instant access to all features for 7 days</p>
-                        </div>
+            <div class="section-title">
+                <h2 class="gradient-text">3 Simple Steps to Get Started</h2>
+                <p>Downloading and installing PDF Fusion Pro is quick and easy</p>
+            </div>
+            
+            <div class="download-steps">
+                <div class="step-card glass card-3d hover-lift">
+                    <div class="step-number gradient-text">1</div>
+                    <h3>Download the Installer</h3>
+                    <p>Click the download button above to get the latest version of PDF Fusion Pro for Windows.</p>
+                </div>
+                <div class="step-card glass card-3d hover-lift">
+                    <div class="step-number gradient-text">2</div>
+                    <h3>Run the Installer</h3>
+                    <p>Double-click the downloaded file and follow the on-screen instructions to install the software.</p>
+                </div>
+                <div class="step-card glass card-3d hover-lift">
+                    <div class="step-number gradient-text">3</div>
+                    <h3>Start Using</h3>
+                    <p>Launch PDF Fusion Pro and start exploring all its powerful features with your 7-day free trial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Requirements Section -->
+    <section class="why-choose glass">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="gradient-text">System Requirements</h2>
+                <p>Ensure your system meets the minimum requirements for optimal performance</p>
+            </div>
+            
+            <div class="system-requirements">
+                <div class="requirements-grid">
+                    <div class="glass card-3d hover-lift">
+                        <h3 class="gradient-text">📱 Operating System</h3>
+                        <ul style="list-style: none; margin-top: var(--spacing-md);">
+                            <li>✅ Windows 10 (64-bit)</li>
+                            <li>✅ Windows 11 (64-bit)</li>
+                            <li>❌ Windows 7/8 (no longer supported)</li>
+                            <li>❌ macOS/Linux (coming soon)</li>
+                        </ul>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Test All Features</h3>
-                            <p>Convert, edit, batch process with no limitations</p>
-                        </div>
+                    <div class="glass card-3d hover-lift">
+                        <h3 class="gradient-text">💻 Hardware Requirements</h3>
+                        <ul style="list-style: none; margin-top: var(--spacing-md);">
+                            <li>✅ Intel or AMD processor (1 GHz or faster)</li>
+                            <li>✅ 4 GB RAM (8 GB recommended)</li>
+                            <li>✅ 200 MB free disk space</li>
+                            <li>✅ Screen resolution 1024x768 or higher</li>
+                        </ul>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Unlock Lifetime Access</h3>
-                            <p>One payment for permanent license and updates</p>
-                        </div>
+                    <div class="glass card-3d hover-lift">
+                        <h3 class="gradient-text">🔧 Software Requirements</h3>
+                        <ul style="list-style: none; margin-top: var(--spacing-md);">
+                            <li>✅ .NET Framework 4.7.2 or later</li>
+                            <li>✅ Microsoft Visual C++ Redistributable 2019</li>
+                            <li>✅ No internet connection required for use</li>
+                        </ul>
+                    </div>
+                    <div class="glass card-3d hover-lift">
+                        <h3 class="gradient-text">📄 Supported File Formats</h3>
+                        <ul style="list-style: none; margin-top: var(--spacing-md);">
+                            <li>✅ PDF (all versions)</li>
+                            <li>✅ Word (.docx, .doc)</li>
+                            <li>✅ Excel (.xlsx, .xls)</li>
+                            <li>✅ PowerPoint (.pptx, .ppt)</li>
+                            <li>✅ Images (JPG, PNG, BMP, TIFF)</li>
+                            <li>✅ HTML, TXT</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download Options -->
-    <section class="download-options">
+    <!-- Installation Guide Section -->
+    <section class="features">
         <div class="container">
-            <div class="platform-selector">
-                <h2>Select Your Platform</h2>
-                <div class="platform-tabs">
-                    <button class="platform-tab active" data-platform="windows">
-                        <i class="fab fa-windows"></i> Windows
-                    </button>
-                    <button class="platform-tab" data-platform="mac">
-                        <i class="fab fa-apple"></i> macOS
-                    </button>
-                </div>
-                
-                <div class="platform-content active" id="windows">
-                    <div class="platform-info">
-                        <div class="system-requirements">
-                            <h3>System Requirements</h3>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Windows 10 / 11 (64-bit)</li>
-                                <li><i class="fas fa-check"></i> 4GB RAM minimum (8GB recommended)</li>
-                                <li><i class="fas fa-check"></i> 500MB free disk space</li>
-                                <li><i class="fas fa-check"></i> .NET Framework 4.8 or later</li>
-                                <li><i class="fas fa-check"></i> Screen resolution: 1280x720 or higher</li>
-                                <li><i class="fas fa-check"></i> Internet connection for activation only</li>
-                            </ul>
-                        </div>
-                        <div class="download-card">
-                            <div class="version-info">
-                                <span class="version-badge">Latest Version 2.1.0</span>
-                                <span class="release-date">Released: Jan 15, 2024</span>
-                            </div>
-                            <div class="file-info">
-                                <p><i class="fas fa-download"></i> File size: 85 MB</p>
-                                <p><i class="fas fa-language"></i> Languages: 20+ included</p>
-                                <p><i class="fas fa-shield-alt"></i> Digital signature verified</p>
-                            </div>
-                            <a href="https://getpdffusion.com/files/pdf-fusion.zip" class="btn btn-large " download>
-                            <i class="fas fa-download"></i> Download PDF Fusion for Windows
-                            </a>
-                            <p class="download-note">Windows 64-bit • Offline installer • No bundled software</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="platform-content" id="mac">
-                    <div class="platform-info">
-                        <div class="system-requirements">
-                            <h3>System Requirements</h3>
-                            <ul>
-                                <li><i class="fas fa-check"></i> macOS 10.15 (Catalina) or later</li>
-                                <li><i class="fas fa-check"></i> 4GB RAM minimum (8GB recommended)</li>
-                                <li><i class="fas fa-check"></i> 500MB free disk space</li>
-                                <li><i class="fas fa-check"></i> Apple Silicon or Intel processor</li>
-                                <li><i class="fas fa-check"></i> Screen resolution: 1280x720 or higher</li>
-                                <li><i class="fas fa-check"></i> Internet connection for activation only</li>
-                            </ul>
-                        </div>
-                        <div class="download-card">
-                            <div class="version-info">
-                                <span class="version-badge">Latest Version 2.1.0</span>
-                                <span class="release-date">Released: Jan 15, 2024</span>
-                            </div>
-                            <div class="file-info">
-                                <p><i class="fas fa-download"></i> File size: 92 MB</p>
-                                <p><i class="fas fa-language"></i> Languages: 20+ included</p>
-                                <p><i class="fas fa-apple"></i> Notarized by Apple</p>
-                            </div>
-                            <a href="#" class="btn btn-large download-btn">
-                                <i class="fas fa-download"></i> Download PDF Fusion for macOS
-                            </a>
-                            <p class="download-note">macOS 10.15+ • Universal binary • Apple Silicon native</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-title">
+                <h2 class="gradient-text">Installation Guide</h2>
+                <p>Follow these step-by-step instructions to install PDF Fusion Pro</p>
+            </div>
+            
+            <div class="card glass card-3d" style="max-width: 800px; margin: 0 auto;">
+                <ol style="padding-left: var(--spacing-2xl);">
+                    <li style="margin-bottom: var(--spacing-lg);">
+                        <h4 class="gradient-text">Run the Installer</h4>
+                        <p>After downloading the installer, locate the file in your Downloads folder and double-click it to run. If you see a Windows SmartScreen warning, click "More info" and then "Run anyway" to continue.</p>
+                    </li>
+                    <li style="margin-bottom: var(--spacing-lg);">
+                        <h4 class="gradient-text">Accept the License Agreement</h4>
+                        <p>Read the End User License Agreement carefully. If you agree to the terms, select "I accept the agreement" and click "Next" to continue.</p>
+                    </li>
+                    <li style="margin-bottom: var(--spacing-lg);">
+                        <h4 class="gradient-text">Choose Installation Location</h4>
+                        <p>Select the folder where you want to install PDF Fusion Pro. The default location is usually fine for most users. Click "Next" to continue.</p>
+                    </li>
+                    <li style="margin-bottom: var(--spacing-lg);">
+                        <h4 class="gradient-text">Select Additional Tasks</h4>
+                        <p>Choose whether to create a desktop shortcut and add PDF Fusion Pro to your Start menu. Click "Next" to continue.</p>
+                    </li>
+                    <li style="margin-bottom: var(--spacing-lg);">
+                        <h4 class="gradient-text">Ready to Install</h4>
+                        <p>Review your installation settings. If everything looks correct, click "Install" to begin the installation process.</p>
+                    </li>
+                    <li style="margin-bottom: var(--spacing-lg);">
+                        <h4 class="gradient-text">Complete the Installation</h4>
+                        <p>Wait for the installation to complete. Once finished, click "Finish" to launch PDF Fusion Pro.</p>
+                    </li>
+                </ol>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Preview -->
-    <section class="pricing-preview">
+    <!-- Activation Guide Section -->
+    <section class="why-choose glass">
         <div class="container">
-            <h2>Simple, Transparent Pricing</h2>
-            <p class="section-subtitle">One payment, lifetime access. No subscriptions, no hidden fees.</p>
-            
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3>PDF Fusion Pro</h3>
-                    <div class="price-display">
-                        <span class="original-price">$99.99</span>
-                        <span class="current-price">$49.99</span>
-                        <span class="discount-badge">30% OFF</span>
-                    </div>
-                    <p class="price-note">One-time payment • Lifetime license • Free updates</p>
-                </div>
-                
-                <div class="pricing-features">
-                    <ul>
-                        <li><i class="fas fa-check"></i> All conversion features</li>
-                        <li><i class="fas fa-check"></i> Full editing & processing tools</li>
-                        <li><i class="fas fa-check"></i> Batch processing capabilities</li>
-                        <li><i class="fas fa-check"></i> Offline operation (100% private)</li>
-                        <li><i class="fas fa-check"></i> 20+ language interfaces</li>
-                        <li><i class="fas fa-check"></i> Lifetime updates for version 2.x</li>
-                        <li><i class="fas fa-check"></i> Priority email support</li>
-                        <li><i class="fas fa-check"></i> 30-day money-back guarantee</li>
-                    </ul>
-                </div>
-                
-                <div class="pricing-cta">
-                    <a href="pricing.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-shopping-cart"></i> Buy Now - $49.99
-                    </a>
-                    <p class="payment-methods">
-                        <i class="fab fa-cc-visa"></i>
-                        <i class="fab fa-cc-mastercard"></i>
-                        <i class="fab fa-cc-paypal"></i>
-                        <i class="fab fa-apple-pay"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How does the free trial work?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>The free trial gives you <strong>full access to all features for 7 days</strong>. No credit card is required to start. After 7 days, you can choose to purchase a lifetime license to continue using the software. The trial period starts from the moment you first launch the application.</p>
-                </div>
+            <div class="section-title">
+                <h2 class="gradient-text">Activation Instructions</h2>
+                <p>How to activate your PDF Fusion Pro license</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Is my data safe with PDF Fusion?</h3>
-                    <i class="fas fa-chevron-down"></i>
+            <div class="features-grid" style="max-width: 1000px; margin: 0 auto;">
+                <div class="feature-card glass card-3d hover-lift">
+                    <div class="feature-icon gradient-text">🆓</div>
+                    <h3>Activate Free Trial</h3>
+                    <ol style="padding-left: var(--spacing-xl); margin-top: var(--spacing-md);">
+                        <li>Launch PDF Fusion Pro</li>
+                        <li>Click "Start Free Trial" on the welcome screen</li>
+                        <li>No credit card required</li>
+                        <li>Your trial will automatically activate</li>
+                        <li>Enjoy 7 days of full-feature access</li>
+                    </ol>
                 </div>
-                <div class="faq-answer">
-                    <p><strong>Yes, absolutely.</strong> PDF Fusion works 100% offline. Your documents never leave your computer. We don't collect, store, or transmit any of your files. Your privacy is guaranteed. The only internet connection needed is for initial activation (a few kilobytes of data).</p>
+                <div class="feature-card glass card-3d hover-lift">
+                    <div class="feature-icon gradient-text">🔑</div>
+                    <h3>Activate Purchased License</h3>
+                    <ol style="padding-left: var(--spacing-xl); margin-top: var(--spacing-md);">
+                        <li>Launch PDF Fusion Pro</li>
+                        <li>Click "Activate License" on the welcome screen</li>
+                        <li>Enter your activation code from the email you received</li>
+                        <li>Click "Activate" to verify your license</li>
+                        <li>Your license will be activated permanently</li>
+                    </ol>
                 </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Can I install on multiple computers?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>The personal license is for <strong>one computer</strong> only. If you need to install on multiple computers, you'll need to purchase additional licenses or consider our business license which covers up to 5 computers.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What if I need help during installation?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Our <a href="support.html">support page</a> has detailed installation guides and troubleshooting tips. If you still need help, our support team is available via email and typically responds within 24 hours on business days.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do you offer volume discounts for businesses?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes! We offer special pricing for businesses and educational institutions needing multiple licenses. Please <a href="support.html#contact">contact our sales team</a> for custom quotes and volume discounts.</p>
+                <div class="feature-card glass card-3d hover-lift">
+                    <div class="feature-icon gradient-text">📧</div>
+                    <h3>Need Help?</h3>
+                    <p>If you encounter any issues during activation, please contact our support team at <a href="mailto:support@getpdffusion.com" style="color: var(--primary-color);">support@getpdffusion.com</a>. We're here to help!</p>
+                    <p style="margin-top: var(--spacing-md);">For enterprise customers, please contact us for volume licensing options.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="features">
         <div class="container">
-            <div class="cta-box">
-                <h2>Ready to Escape Subscription Fees?</h2>
-                <p>Join thousands of professionals who have switched to PDF Fusion.</p>
-                <a href="download.html" class="btn btn-large">
-                    <i class="fas fa-rocket"></i> Start Your 7-Day Free Trial
-                </a>
-                <p class="guarantee">
-                    <i class="fas fa-check-circle"></i> No credit card required • 30-day money-back guarantee
+            <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                <h2 class="gradient-text">Ready to Transform Your PDF Workflow?</h2>
+                <p style="font-size: 1.25rem; margin-bottom: var(--spacing-2xl);">Download PDF Fusion Pro today and experience the difference for yourself</p>
+                <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe" class="btn btn-primary btn-glow btn-large animate-pulse" target="_blank">Download Free Trial</a>
+                    <a href="https://pdfwhirl.gumroad.com/l/dvsci" class="btn btn-secondary btn-glow btn-large" target="_blank">Buy Now - $69</a>
+                </div>
+                <p style="margin-top: var(--spacing-xl); color: var(--text-secondary); font-size: 0.875rem;">
+                    ✅ No credit card required • ✅ 7-day full-feature trial • ✅ 30-day money-back guarantee
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer glass">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>PDF Fusion Pro</h4>
-                    <p>The professional PDF solution that respects your privacy and budget.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                    <h4 class="gradient-text">PDF Fusion Pro</h4>
+                    <p>The ultimate all-in-one desktop PDF solution for professionals. Work offline, save time, and get professional results.</p>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <a href="https://pdfwhirl.gumroad.com/l/dvsci" target="_blank" class="btn btn-outline btn-glow" style="font-size: 0.875rem;">Buy Now - $69</a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Product</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="features.html">Features</a></li>
-                        <li><a href="download.html">Download</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="#">Updates</a></li>
+                        <li><a href="download.html" class="active">Download</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="support.html">Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="support.html">Help Center</a></li>
-                        <li><a href="support.html#faq">FAQ</a></li>
-                        <li><a href="support.html#contact">Contact Us</a></li>
-                        <li><a href="#">Documentation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Support Email: <a href="mailto:support@getpdffusion.com" style="color: var(--text-light);">support@getpdffusion.com</a></p>
+                    <p>Business Inquiries: <a href="mailto:getpdffusion7300@gmail.com" style="color: var(--text-light);">getpdffusion7300@gmail.com</a></p>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <p style="font-size: 0.875rem;">Follow us:</p>
+                        <div style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-sm);">
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">🐦</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">📘</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">📸</a>
+                            <a href="#" class="social-icon" style="font-size: 1.25rem;">💼</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PDF Fusion. All rights reserved. Made with <i class="fas fa-heart"></i> for PDF professionals worldwide.</p>
-                <p class="footer-languages">
-                    <i class="fas fa-globe"></i> Available in: English, Español, Français, Deutsch, Italiano, 日本語, 中文, and 15+ more
-                </p>
+                <p>&copy; 2026 PDF Fusion Pro. All rights reserved. | <a href="https://www.getpdffusion.com/" style="color: var(--text-light);">www.getpdffusion.com</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-        // 下载页面特定脚本
-        document.addEventListener('DOMContentLoaded', function() {
-            // 平台切换功能
-            const platformTabs = document.querySelectorAll('.platform-tab');
-            const platformContents = document.querySelectorAll('.platform-content');
-            
-            platformTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // 移除所有active类
-                    platformTabs.forEach(t => t.classList.remove('active'));
-                    platformContents.forEach(c => c.classList.remove('active'));
-                    
-                    // 为当前标签添加active类
-                    this.classList.add('active');
-                    
-                    // 显示对应内容
-                    const platform = this.getAttribute('data-platform');
-                    document.getElementById(platform).classList.add('active');
-                });
-            });
-            
-            // 下载按钮处理
-            const downloadButtons = document.querySelectorAll('.download-btn');
-            downloadButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // 模拟下载开始
-                    const originalText = this.innerHTML;
-                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
-                    this.classList.add('downloading');
-                    this.disabled = true;
-                    
-                    // 模拟下载过程（2秒）
-                    setTimeout(() => {
-                        this.innerHTML = '<i class="fas fa-check"></i> Download Complete!';
-                        this.classList.remove('downloading');
-                        this.classList.add('downloaded');
-                        
-                        // 显示安装提示
-                        alert('Download complete! Please run the installer to start your 7-day free trial.\n\nAfter installation, you\'ll have full access to all features for 7 days with no restrictions.');
-                        
-                        // 3秒后恢复按钮
-                        setTimeout(() => {
-                            this.innerHTML = originalText;
-                            this.classList.remove('downloaded');
-                            this.disabled = false;
-                        }, 3000);
-                    }, 2000);
-                });
-            });
-            
-            // FAQ功能（复用主脚本，这里确保展开/关闭正常工作）
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
-                const icon = question.querySelector('i');
-                
-                // 默认关闭所有答案
-                answer.style.display = 'none';
-                
-                question.addEventListener('click', function() {
-                    // 如果当前答案是打开的，则关闭
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                        icon.style.transform = 'rotate(0deg)';
-                    } else {
-                        // 关闭其他所有FAQ
-                        faqItems.forEach(otherItem => {
-                            if (otherItem !== item) {
-                                otherItem.querySelector('.faq-answer').style.display = 'none';
-                                otherItem.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
-                            }
-                        });
-                        
-                        // 打开当前FAQ
-                        answer.style.display = 'block';
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-            
-            // 默认展开第一个FAQ
-            if (faqItems.length > 0) {
-                const firstAnswer = faqItems[0].querySelector('.faq-answer');
-                const firstIcon = faqItems[0].querySelector('.faq-question i');
-                firstAnswer.style.display = 'block';
-                firstIcon.style.transform = 'rotate(180deg)';
-            }
-        });
-    </script>
+
 </body>
 </html>
