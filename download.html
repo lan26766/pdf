@@ -43,8 +43,44 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD",
-            "description": "Free 3-day trial"
+            "description": "Free 3-day trial",
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "US",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 30,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "USD"
+                },
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 1,
+                        "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 1,
+                        "maxValue": 3,
+                        "unitCode": "DAY"
+                    }
+                }
+            }
         },
+        "image": [
+            "https://www.getpdffusion.com/images/PIC101.png",
+            "https://www.getpdffusion.com/images/PIC102.png",
+            "https://www.getpdffusion.com/images/PIC103.png"
+        ],
         "description": "Download PDF Local Fusion Pro for Windows. 3-day full-feature free trial.",
         "softwareVersion": "5.8.8",
         "downloadUrl": "https://www.dingshibaofang.com/files/PDFFusionPro_Setup_x64.exe",
